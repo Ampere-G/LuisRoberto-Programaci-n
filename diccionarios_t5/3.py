@@ -1,4 +1,4 @@
-#Escribe un programa en Python para convertir dos listas en un diccionario.
+#3 Escribe un programa en Python para convertir dos listas en un diccionario.
 lista1=['a','b','c','d']
 lista2=[1,2,3,4]
 
