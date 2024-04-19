@@ -1,4 +1,4 @@
-#Escribe un programa en Python para eliminar una clave de un diccionario.
+#2 Escribe un programa en Python para eliminar una clave de un diccionario.
 
 numeros=dict(a=2,b=5,c=7,d=8)
 print(f'Diccionario inicial: {numeros}')
