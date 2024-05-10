@@ -2,7 +2,8 @@ import turtle as tr
 
 #Minima medida en pixeles
 #Establecer a cuantos pixeles equivaldrá la unidad
-u=10
+#Cada unidad equivale a 0.1 pixeles o dicho de otra forma
+u=0.1
 
 #Establecer propiedades de la ventana
 alto=400
@@ -21,17 +22,19 @@ tr.setworldcoordinates(0,-alto,ancho,alto)
 #Mostrar tortuga
 tr.showturtle()
 
-#Ecuaciones de movimiento convertidas a las unidades deseadas
+#Ecuaciones de movimiento convertidas a pixeles
+
+#Los datos iniciales están en unidades u
 
 t=0
 x_0=0
 y_0=0
-v_0x=80
-v_0y=100
-g=(9.8)*u
+v_0x=20
+v_0y=40
+g=9.8
 
-posx=lambda t: (x_0 + v_0x*t)*u
-posy=lambda t: (y_0 + v_0y*t - g*t**2)*u
+posx=lambda t: (x_0 + v_0x*t)/u
+posy=lambda t: (y_0 + v_0y*t - g*t**2)/u
 
 #Hacer que se actualize la posicion en aumentando 0.1 segundo en cada iteracion y que pare cuando posicion en y sea igual a 0 de nuevo
 while posy(t)>=0:
@@ -39,4 +42,5 @@ while posy(t)>=0:
     t+=0.1
 
 tr.done()
+
 
