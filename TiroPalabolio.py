@@ -2,7 +2,7 @@ import turtle as tr
 
 #Minima medida en pixeles
 #Establecer a cuantos pixeles equivaldrá la unidad
-#Cada unidad equivale a 0.1 pixeles o dicho de otra forma
+#Cada pixel equivale a 0.1 unidades
 u=0.1
 
 #Establecer propiedades de la ventana
