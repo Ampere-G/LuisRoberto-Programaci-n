@@ -19,6 +19,17 @@ tr.color('green')
 #Establecer los ejes coordenados justo hasta la izquierda y en el medio del eje vertical para una mejor visualización
 tr.setworldcoordinates(0,-alto,ancho,alto)
 
+#Dibujar Ejes coordenados
+
+tr.goto(900,0)
+tr.goto(-900,0)
+tr.penup()
+tr.goto(0,500)
+tr.pendown()
+tr.goto(0,-500)
+tr.penup()
+tr.goto(0,0)
+tr.pendown()
 #Mostrar tortuga
 tr.showturtle()
 
@@ -33,13 +44,14 @@ v_0x=20
 v_0y=40
 g=9.8
 
+#Establecer ecuaciones de movimiento en cada eje
 posx=lambda t: (x_0 + v_0x*t)/u
 posy=lambda t: (y_0 + v_0y*t - g*t**2)/u
 
 #Hacer que se actualize la posicion en aumentando 0.1 segundo en cada iteracion y que pare cuando posicion en y sea igual a 0 de nuevo
 while posy(t)>=0:
     tr.goto(posx(t),posy(t))
-    t+=0.1
+    t+=0.01
 
 tr.done()
 
